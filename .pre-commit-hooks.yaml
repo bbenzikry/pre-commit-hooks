@@ -12,6 +12,13 @@
   entry: dephell deps convert --envs main --from=pyproject.toml --to=requirements.txt
   files: "^pyproject.toml$"
   pass_filenames: false
+- id: pyproject-toml-to-requirements-txt-poetry
+  name: Convert pyproject.toml to requirements.txt
+  description: Generate requirements.txt from pyproject.toml using poetry
+  language: system
+  entry: poetry export -f requirements.txt > requirements.txt
+  files: "^pyproject.toml$"
+  pass_filenames: false
 - id: pyproject-toml-to-dev-requirements-txt
   name: Convert pyproject.toml to requirements.dev.txt
   description: Generate requirements.txt pyproject.toml for backwards compatibility using 'dephell'.
