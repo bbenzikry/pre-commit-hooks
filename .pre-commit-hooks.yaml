@@ -9,14 +9,14 @@
   name: Convert pyproject.toml to requirements.txt
   description: Generate requirements.txt pyproject.toml for backwards compatibility using 'dephell'.
   language: system
-  entry: dephell deps convert --env=main --from=pyproject.toml --to=requirements.txt
+  entry: dephell deps convert --envs main --from=pyproject.toml --to=requirements.txt
   files: "^pyproject.toml$"
   pass_filenames: false
 - id: pyproject-toml-to-dev-requirements-txt
   name: Convert pyproject.toml to requirements.dev.txt
   description: Generate requirements.txt pyproject.toml for backwards compatibility using 'dephell'.
   language: system
-  entry: dephell deps convert --env=dev --from=pyproject.toml --to=requirements.txt
+  entry: dephell deps convert --envs dev --from=pyproject.toml --to=requirements.dev.txt
   files: "^pyproject.toml$"
   pass_filenames: false
 - id: dephell
